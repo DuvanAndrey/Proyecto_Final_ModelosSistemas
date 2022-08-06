@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -44,6 +45,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Inicio = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,7 +96,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "Hola! Gracias a Dios ya termina el cuatri!";
+            this.pictureBox1.Tag = "";
+            this.toolTip1.SetToolTip(this.pictureBox1, "Hola! Gracias a Dios ya casi termina el cuatri! jajaja");
             // 
             // label4
             // 
@@ -223,6 +226,10 @@
             this.btn_Inicio.UseVisualStyleBackColor = false;
             this.btn_Inicio.Click += new System.EventHandler(this.btn_Inicio_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.CadetBlue;
+            // 
             // PantallaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -263,5 +270,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
