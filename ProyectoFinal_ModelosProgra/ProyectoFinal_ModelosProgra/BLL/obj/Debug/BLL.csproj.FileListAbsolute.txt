@@ -7,3 +7,12 @@ C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_Mod
 C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.dll
 C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.pdb
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\BLL.dll
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\BLL.pdb
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\DAL.dll
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\DAL.pdb
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.dll
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.pdb

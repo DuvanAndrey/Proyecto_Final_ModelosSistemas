@@ -4,3 +4,9 @@ C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_Mod
 C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.dll
 C:\Users\dvlco\OneDrive\Escritorio\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.pdb
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\bin\Debug\DAL.dll
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\bin\Debug\DAL.pdb
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.dll
+C:\Users\dvlco\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.pdb

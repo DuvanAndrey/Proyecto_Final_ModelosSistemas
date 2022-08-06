@@ -16,7 +16,7 @@ namespace UL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pantallas.PantallaInicio());
+            Application.Run(new Pantallas.Bienvenida());
         }
     }
 }

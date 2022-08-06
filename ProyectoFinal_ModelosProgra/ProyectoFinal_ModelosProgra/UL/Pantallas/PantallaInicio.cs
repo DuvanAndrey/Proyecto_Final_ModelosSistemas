@@ -19,8 +19,15 @@ namespace UL.Pantallas
 
         private void PantallaInicio_Load(object sender, EventArgs e)
         {
-            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
+            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
            
+        }
+
+        private void btn_Inicio_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Bienvenida();
+            formulario.Show();
+            this.Hide();
         }
     }
 }
