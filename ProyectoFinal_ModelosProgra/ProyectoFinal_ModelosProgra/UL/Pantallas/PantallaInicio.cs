@@ -24,8 +24,7 @@ namespace UL.Pantallas
 
         private void PantallaInicio_Load(object sender, EventArgs e)
         {
-            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-           
+            CargarDatos();
         }
 
         private void btn_Inicio_Click(object sender, EventArgs e)
@@ -78,6 +77,23 @@ namespace UL.Pantallas
         {
             textValor1.Text = string.Empty;
             textValor2.Text = string.Empty;
+        }
+
+        private void CargarDatos()
+        {
+            ObjBLL.ListarRegistro(ref ObjDAL);
+
+            if (ObjDAL.sMsj_Error == string.Empty)
+            {
+                dgvRegistro.DataSource = null;
+                dgvRegistro.DataSource = ObjDAL.dt_PARAMETROS;
+            }
+            else
+            {
+                dgvRegistro.DataSource = null;
+                MessageBox.Show("Se presentó un error a la hora de cargar los datos de los Estados. \n\nERROR = [ " + ObjDAL.sMsj_Error + " ].",
+                    "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD\Cls_BD_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variables\cls_Variables_Calculadora_DAL.cs" />
     <Compile Include="Variables\cls_Variables_Validador_DAL.cs" />

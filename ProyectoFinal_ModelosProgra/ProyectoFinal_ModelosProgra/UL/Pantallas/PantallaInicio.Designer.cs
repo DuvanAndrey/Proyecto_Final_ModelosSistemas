@@ -32,9 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonResultado = new System.Windows.Forms.Button();
+            this.buttonBorrarDatos = new System.Windows.Forms.Button();
+            this.buttonBorrarOperacion = new System.Windows.Forms.Button();
+            this.buttonDivision = new System.Windows.Forms.Button();
+            this.buttonMultiplicar = new System.Windows.Forms.Button();
+            this.buttonResta = new System.Windows.Forms.Button();
+            this.textResultado = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRegistro = new System.Windows.Forms.DataGridView();
             this.buttonSuma = new System.Windows.Forms.Button();
             this.textValor2 = new System.Windows.Forms.TextBox();
             this.textValor1 = new System.Windows.Forms.TextBox();
@@ -45,18 +53,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Inicio = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textResultado = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.buttonResta = new System.Windows.Forms.Button();
-            this.buttonMultiplicar = new System.Windows.Forms.Button();
-            this.buttonDivision = new System.Windows.Forms.Button();
-            this.buttonBorrarOperacion = new System.Windows.Forms.Button();
-            this.buttonBorrarDatos = new System.Windows.Forms.Button();
-            this.buttonResultado = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +85,7 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dgvRegistro);
             this.tabPage1.Controls.Add(this.buttonSuma);
             this.tabPage1.Controls.Add(this.textValor2);
             this.tabPage1.Controls.Add(this.textValor1);
@@ -99,6 +99,91 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Calculadora";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonResultado
+            // 
+            this.buttonResultado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResultado.Location = new System.Drawing.Point(38, 344);
+            this.buttonResultado.Name = "buttonResultado";
+            this.buttonResultado.Size = new System.Drawing.Size(342, 44);
+            this.buttonResultado.TabIndex = 15;
+            this.buttonResultado.Text = "Resultado";
+            this.buttonResultado.UseVisualStyleBackColor = true;
+            this.buttonResultado.Click += new System.EventHandler(this.buttonResultado_Click);
+            // 
+            // buttonBorrarDatos
+            // 
+            this.buttonBorrarDatos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrarDatos.Location = new System.Drawing.Point(221, 278);
+            this.buttonBorrarDatos.Name = "buttonBorrarDatos";
+            this.buttonBorrarDatos.Size = new System.Drawing.Size(159, 44);
+            this.buttonBorrarDatos.TabIndex = 14;
+            this.buttonBorrarDatos.Text = "Borrar Datos";
+            this.buttonBorrarDatos.UseVisualStyleBackColor = true;
+            this.buttonBorrarDatos.Click += new System.EventHandler(this.buttonBorrarDatos_Click);
+            // 
+            // buttonBorrarOperacion
+            // 
+            this.buttonBorrarOperacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrarOperacion.Location = new System.Drawing.Point(38, 278);
+            this.buttonBorrarOperacion.Name = "buttonBorrarOperacion";
+            this.buttonBorrarOperacion.Size = new System.Drawing.Size(159, 44);
+            this.buttonBorrarOperacion.TabIndex = 13;
+            this.buttonBorrarOperacion.Text = "Borrar Operación";
+            this.buttonBorrarOperacion.UseVisualStyleBackColor = true;
+            // 
+            // buttonDivision
+            // 
+            this.buttonDivision.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDivision.Location = new System.Drawing.Point(221, 210);
+            this.buttonDivision.Name = "buttonDivision";
+            this.buttonDivision.Size = new System.Drawing.Size(159, 44);
+            this.buttonDivision.TabIndex = 12;
+            this.buttonDivision.Text = "División";
+            this.buttonDivision.UseVisualStyleBackColor = true;
+            this.buttonDivision.Click += new System.EventHandler(this.buttonDivision_Click);
+            // 
+            // buttonMultiplicar
+            // 
+            this.buttonMultiplicar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMultiplicar.Location = new System.Drawing.Point(38, 210);
+            this.buttonMultiplicar.Name = "buttonMultiplicar";
+            this.buttonMultiplicar.Size = new System.Drawing.Size(159, 44);
+            this.buttonMultiplicar.TabIndex = 11;
+            this.buttonMultiplicar.Text = "Multiplicar";
+            this.buttonMultiplicar.UseVisualStyleBackColor = true;
+            this.buttonMultiplicar.Click += new System.EventHandler(this.buttonMultiplicar_Click);
+            // 
+            // buttonResta
+            // 
+            this.buttonResta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResta.Location = new System.Drawing.Point(221, 145);
+            this.buttonResta.Name = "buttonResta";
+            this.buttonResta.Size = new System.Drawing.Size(159, 44);
+            this.buttonResta.TabIndex = 10;
+            this.buttonResta.Text = "Resta";
+            this.buttonResta.UseVisualStyleBackColor = true;
+            this.buttonResta.Click += new System.EventHandler(this.buttonResta_Click);
+            // 
+            // textResultado
+            // 
+            this.textResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textResultado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textResultado.Location = new System.Drawing.Point(611, 313);
+            this.textResultado.Name = "textResultado";
+            this.textResultado.ReadOnly = true;
+            this.textResultado.Size = new System.Drawing.Size(117, 27);
+            this.textResultado.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(498, 316);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Resultado:";
             // 
             // pictureBox1
             // 
@@ -123,15 +208,15 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Historial de Resultados";
             // 
-            // dataGridView1
+            // dgvRegistro
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.Location = new System.Drawing.Point(461, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(394, 197);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvRegistro.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistro.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgvRegistro.Location = new System.Drawing.Point(461, 69);
+            this.dgvRegistro.Name = "dgvRegistro";
+            this.dgvRegistro.Size = new System.Drawing.Size(394, 197);
+            this.dgvRegistro.TabIndex = 6;
             // 
             // buttonSuma
             // 
@@ -231,91 +316,6 @@
             // 
             this.toolTip1.BackColor = System.Drawing.Color.CadetBlue;
             // 
-            // textResultado
-            // 
-            this.textResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textResultado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textResultado.Location = new System.Drawing.Point(611, 313);
-            this.textResultado.Name = "textResultado";
-            this.textResultado.ReadOnly = true;
-            this.textResultado.Size = new System.Drawing.Size(117, 27);
-            this.textResultado.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(498, 316);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Resultado:";
-            // 
-            // buttonResta
-            // 
-            this.buttonResta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResta.Location = new System.Drawing.Point(221, 145);
-            this.buttonResta.Name = "buttonResta";
-            this.buttonResta.Size = new System.Drawing.Size(159, 44);
-            this.buttonResta.TabIndex = 10;
-            this.buttonResta.Text = "Resta";
-            this.buttonResta.UseVisualStyleBackColor = true;
-            this.buttonResta.Click += new System.EventHandler(this.buttonResta_Click);
-            // 
-            // buttonMultiplicar
-            // 
-            this.buttonMultiplicar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMultiplicar.Location = new System.Drawing.Point(38, 210);
-            this.buttonMultiplicar.Name = "buttonMultiplicar";
-            this.buttonMultiplicar.Size = new System.Drawing.Size(159, 44);
-            this.buttonMultiplicar.TabIndex = 11;
-            this.buttonMultiplicar.Text = "Multiplicar";
-            this.buttonMultiplicar.UseVisualStyleBackColor = true;
-            this.buttonMultiplicar.Click += new System.EventHandler(this.buttonMultiplicar_Click);
-            // 
-            // buttonDivision
-            // 
-            this.buttonDivision.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDivision.Location = new System.Drawing.Point(221, 210);
-            this.buttonDivision.Name = "buttonDivision";
-            this.buttonDivision.Size = new System.Drawing.Size(159, 44);
-            this.buttonDivision.TabIndex = 12;
-            this.buttonDivision.Text = "División";
-            this.buttonDivision.UseVisualStyleBackColor = true;
-            this.buttonDivision.Click += new System.EventHandler(this.buttonDivision_Click);
-            // 
-            // buttonBorrarOperacion
-            // 
-            this.buttonBorrarOperacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrarOperacion.Location = new System.Drawing.Point(38, 278);
-            this.buttonBorrarOperacion.Name = "buttonBorrarOperacion";
-            this.buttonBorrarOperacion.Size = new System.Drawing.Size(159, 44);
-            this.buttonBorrarOperacion.TabIndex = 13;
-            this.buttonBorrarOperacion.Text = "Borrar Operación";
-            this.buttonBorrarOperacion.UseVisualStyleBackColor = true;
-            // 
-            // buttonBorrarDatos
-            // 
-            this.buttonBorrarDatos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrarDatos.Location = new System.Drawing.Point(221, 278);
-            this.buttonBorrarDatos.Name = "buttonBorrarDatos";
-            this.buttonBorrarDatos.Size = new System.Drawing.Size(159, 44);
-            this.buttonBorrarDatos.TabIndex = 14;
-            this.buttonBorrarDatos.Text = "Borrar Datos";
-            this.buttonBorrarDatos.UseVisualStyleBackColor = true;
-            this.buttonBorrarDatos.Click += new System.EventHandler(this.buttonBorrarDatos_Click);
-            // 
-            // buttonResultado
-            // 
-            this.buttonResultado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResultado.Location = new System.Drawing.Point(38, 344);
-            this.buttonResultado.Name = "buttonResultado";
-            this.buttonResultado.Size = new System.Drawing.Size(342, 44);
-            this.buttonResultado.TabIndex = 15;
-            this.buttonResultado.Text = "Resultado";
-            this.buttonResultado.UseVisualStyleBackColor = true;
-            this.buttonResultado.Click += new System.EventHandler(this.buttonResultado_Click);
-            // 
             // PantallaInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -332,7 +332,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistro)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -353,7 +353,7 @@
         private System.Windows.Forms.Button buttonSuma;
         private System.Windows.Forms.Button btn_Inicio;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRegistro;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox textResultado;
