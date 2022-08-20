@@ -35,10 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonSuma = new System.Windows.Forms.Button();
+            this.textValor2 = new System.Windows.Forms.TextBox();
+            this.textValor1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -46,6 +45,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_Inicio = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.textResultado = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonResta = new System.Windows.Forms.Button();
+            this.buttonMultiplicar = new System.Windows.Forms.Button();
+            this.buttonDivision = new System.Windows.Forms.Button();
+            this.buttonBorrarOperacion = new System.Windows.Forms.Button();
+            this.buttonBorrarDatos = new System.Windows.Forms.Button();
+            this.buttonResultado = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,13 +75,20 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonResultado);
+            this.tabPage1.Controls.Add(this.buttonBorrarDatos);
+            this.tabPage1.Controls.Add(this.buttonBorrarOperacion);
+            this.tabPage1.Controls.Add(this.buttonDivision);
+            this.tabPage1.Controls.Add(this.buttonMultiplicar);
+            this.tabPage1.Controls.Add(this.buttonResta);
+            this.tabPage1.Controls.Add(this.textResultado);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.buttonSuma);
+            this.tabPage1.Controls.Add(this.textValor2);
+            this.tabPage1.Controls.Add(this.textValor1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,7 +117,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 137);
+            this.label4.Location = new System.Drawing.Point(457, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 20);
             this.label4.TabIndex = 7;
@@ -114,57 +128,44 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(461, 69);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(394, 197);
             this.dataGridView1.TabIndex = 6;
             // 
-            // button1
+            // buttonSuma
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(680, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 61);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonSuma.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSuma.Location = new System.Drawing.Point(38, 145);
+            this.buttonSuma.Name = "buttonSuma";
+            this.buttonSuma.Size = new System.Drawing.Size(159, 44);
+            this.buttonSuma.TabIndex = 5;
+            this.buttonSuma.Text = "Suma";
+            this.buttonSuma.UseVisualStyleBackColor = true;
+            this.buttonSuma.Click += new System.EventHandler(this.buttonSuma_Click);
             // 
-            // textBox2
+            // textValor2
             // 
-            this.textBox2.Location = new System.Drawing.Point(631, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 4;
+            this.textValor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textValor2.Location = new System.Drawing.Point(209, 83);
+            this.textValor2.Name = "textValor2";
+            this.textValor2.Size = new System.Drawing.Size(117, 27);
+            this.textValor2.TabIndex = 4;
             // 
-            // textBox1
+            // textValor1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Location = new System.Drawing.Point(194, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 27);
-            this.textBox1.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Suma",
-            "Resta ",
-            "Multiplicacion ",
-            "Division"});
-            this.comboBox1.Location = new System.Drawing.Point(332, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Operandos";
+            this.textValor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textValor1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textValor1.Location = new System.Drawing.Point(209, 45);
+            this.textValor1.Name = "textValor1";
+            this.textValor1.Size = new System.Drawing.Size(117, 27);
+            this.textValor1.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(472, 72);
+            this.label2.Location = new System.Drawing.Point(34, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 20);
             this.label2.TabIndex = 1;
@@ -230,14 +231,99 @@
             // 
             this.toolTip1.BackColor = System.Drawing.Color.CadetBlue;
             // 
+            // textResultado
+            // 
+            this.textResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textResultado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textResultado.Location = new System.Drawing.Point(611, 313);
+            this.textResultado.Name = "textResultado";
+            this.textResultado.ReadOnly = true;
+            this.textResultado.Size = new System.Drawing.Size(117, 27);
+            this.textResultado.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(498, 316);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Resultado:";
+            // 
+            // buttonResta
+            // 
+            this.buttonResta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResta.Location = new System.Drawing.Point(221, 145);
+            this.buttonResta.Name = "buttonResta";
+            this.buttonResta.Size = new System.Drawing.Size(159, 44);
+            this.buttonResta.TabIndex = 10;
+            this.buttonResta.Text = "Resta";
+            this.buttonResta.UseVisualStyleBackColor = true;
+            this.buttonResta.Click += new System.EventHandler(this.buttonResta_Click);
+            // 
+            // buttonMultiplicar
+            // 
+            this.buttonMultiplicar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMultiplicar.Location = new System.Drawing.Point(38, 210);
+            this.buttonMultiplicar.Name = "buttonMultiplicar";
+            this.buttonMultiplicar.Size = new System.Drawing.Size(159, 44);
+            this.buttonMultiplicar.TabIndex = 11;
+            this.buttonMultiplicar.Text = "Multiplicar";
+            this.buttonMultiplicar.UseVisualStyleBackColor = true;
+            this.buttonMultiplicar.Click += new System.EventHandler(this.buttonMultiplicar_Click);
+            // 
+            // buttonDivision
+            // 
+            this.buttonDivision.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDivision.Location = new System.Drawing.Point(221, 210);
+            this.buttonDivision.Name = "buttonDivision";
+            this.buttonDivision.Size = new System.Drawing.Size(159, 44);
+            this.buttonDivision.TabIndex = 12;
+            this.buttonDivision.Text = "División";
+            this.buttonDivision.UseVisualStyleBackColor = true;
+            this.buttonDivision.Click += new System.EventHandler(this.buttonDivision_Click);
+            // 
+            // buttonBorrarOperacion
+            // 
+            this.buttonBorrarOperacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrarOperacion.Location = new System.Drawing.Point(38, 278);
+            this.buttonBorrarOperacion.Name = "buttonBorrarOperacion";
+            this.buttonBorrarOperacion.Size = new System.Drawing.Size(159, 44);
+            this.buttonBorrarOperacion.TabIndex = 13;
+            this.buttonBorrarOperacion.Text = "Borrar Operación";
+            this.buttonBorrarOperacion.UseVisualStyleBackColor = true;
+            // 
+            // buttonBorrarDatos
+            // 
+            this.buttonBorrarDatos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrarDatos.Location = new System.Drawing.Point(221, 278);
+            this.buttonBorrarDatos.Name = "buttonBorrarDatos";
+            this.buttonBorrarDatos.Size = new System.Drawing.Size(159, 44);
+            this.buttonBorrarDatos.TabIndex = 14;
+            this.buttonBorrarDatos.Text = "Borrar Datos";
+            this.buttonBorrarDatos.UseVisualStyleBackColor = true;
+            this.buttonBorrarDatos.Click += new System.EventHandler(this.buttonBorrarDatos_Click);
+            // 
+            // buttonResultado
+            // 
+            this.buttonResultado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResultado.Location = new System.Drawing.Point(38, 344);
+            this.buttonResultado.Name = "buttonResultado";
+            this.buttonResultado.Size = new System.Drawing.Size(342, 44);
+            this.buttonResultado.TabIndex = 15;
+            this.buttonResultado.Text = "Resultado";
+            this.buttonResultado.UseVisualStyleBackColor = true;
+            this.buttonResultado.Click += new System.EventHandler(this.buttonResultado_Click);
+            // 
             // PantallaInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 542);
             this.Controls.Add(this.btn_Inicio);
             this.Controls.Add(this.tabControl1);
-            this.Font = new System.Drawing.Font("Futura Std Medium", 8.249999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -257,19 +343,26 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textValor2;
+        private System.Windows.Forms.TextBox textValor1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonSuma;
         private System.Windows.Forms.Button btn_Inicio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox textResultado;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonResultado;
+        private System.Windows.Forms.Button buttonBorrarDatos;
+        private System.Windows.Forms.Button buttonBorrarOperacion;
+        private System.Windows.Forms.Button buttonDivision;
+        private System.Windows.Forms.Button buttonMultiplicar;
+        private System.Windows.Forms.Button buttonResta;
     }
 }
