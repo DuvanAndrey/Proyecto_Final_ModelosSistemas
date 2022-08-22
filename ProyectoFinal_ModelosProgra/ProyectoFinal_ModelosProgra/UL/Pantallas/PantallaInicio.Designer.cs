@@ -131,6 +131,7 @@
             this.buttonBorrarOperacion.TabIndex = 13;
             this.buttonBorrarOperacion.Text = "Borrar Operación";
             this.buttonBorrarOperacion.UseVisualStyleBackColor = true;
+            this.buttonBorrarOperacion.Click += new System.EventHandler(this.buttonBorrarOperacion_Click);
             // 
             // buttonDivision
             // 

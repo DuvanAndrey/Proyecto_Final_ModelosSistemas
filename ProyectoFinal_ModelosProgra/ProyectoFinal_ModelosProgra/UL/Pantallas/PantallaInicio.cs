@@ -36,17 +36,19 @@ namespace UL.Pantallas
 
         private void buttonSuma_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = "+";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
             ObjBLL.Sumar(ObjDAL);
+            buttonResta.Enabled = false;
+            buttonMultiplicar.Enabled = false;
+            buttonDivision.Enabled = false;
+
         }
 
         private void buttonResultado_Click(object sender, EventArgs e)
         {
-            ObjDAL.Operador1 = "+";
-            ObjDAL.Observacion1 = "Test";
-
 
             if ((string.IsNullOrEmpty(textValor1.Text)) || (string.IsNullOrEmpty(textValor2.Text)))
             {
@@ -55,6 +57,8 @@ namespace UL.Pantallas
             }
             else
             {
+                ObjDAL.Observacion1 = "Test";
+
                 ObjBLL.InsertarRegistro(ref ObjDAL);
 
                 if (ObjDAL.sMsj_Error == string.Empty)
@@ -74,36 +78,56 @@ namespace UL.Pantallas
 
             textValor1.Text = string.Empty;
             textValor2.Text = string.Empty;
+
+            buttonResta.Enabled = true;
+            buttonSuma.Enabled = true;
+            buttonMultiplicar.Enabled = true;
+            buttonDivision.Enabled = true;
         }
 
         private void buttonResta_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = "-";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
             ObjBLL.Restar(ObjDAL);
+            buttonResta.Enabled = false;
+            buttonMultiplicar.Enabled = false;
+            buttonDivision.Enabled = false;
         }
 
         private void buttonMultiplicar_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = "*";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
             ObjBLL.Multiplicar(ObjDAL);
+            buttonResta.Enabled = false;
+            buttonSuma.Enabled = false;
+            buttonDivision.Enabled = false;
         }
 
         private void buttonDivision_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = "/";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
             ObjBLL.Division(ObjDAL);
+            buttonResta.Enabled = false;
+            buttonSuma.Enabled = false;
+            buttonMultiplicar.Enabled = false;
         }
 
         private void buttonBorrarDatos_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = string.Empty;
             textValor1.Text = string.Empty;
             textValor2.Text = string.Empty;
+            ObjDAL.Resultado1 = string.Empty;
+            ObjDAL.Observacion1 = string.Empty;
         }
 
         private void CargarDatos()
@@ -123,5 +147,12 @@ namespace UL.Pantallas
             }
         }
 
+        private void buttonBorrarOperacion_Click(object sender, EventArgs e)
+        {
+            buttonResta.Enabled = true;
+            buttonSuma.Enabled = true;
+            buttonMultiplicar.Enabled = true;
+            buttonDivision.Enabled = true;
+        }
     }
 }
