@@ -233,7 +233,7 @@
             // textValor2
             // 
             this.textValor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textValor2.Location = new System.Drawing.Point(209, 83);
+            this.textValor2.Location = new System.Drawing.Point(221, 87);
             this.textValor2.Name = "textValor2";
             this.textValor2.Size = new System.Drawing.Size(117, 27);
             this.textValor2.TabIndex = 4;
@@ -242,7 +242,7 @@
             // 
             this.textValor1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textValor1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textValor1.Location = new System.Drawing.Point(209, 45);
+            this.textValor1.Location = new System.Drawing.Point(221, 45);
             this.textValor1.Name = "textValor1";
             this.textValor1.Size = new System.Drawing.Size(117, 27);
             this.textValor1.TabIndex = 3;
@@ -253,9 +253,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 20);
+            this.label2.Size = new System.Drawing.Size(173, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Ingrese otro numero";
+            this.label2.Text = "B) Ingrese otro numero";
             // 
             // label1
             // 
@@ -263,9 +263,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 20);
+            this.label1.Size = new System.Drawing.Size(163, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese un numero";
+            this.label1.Text = "A) Ingrese un numero";
             // 
             // tabPage2
             // 

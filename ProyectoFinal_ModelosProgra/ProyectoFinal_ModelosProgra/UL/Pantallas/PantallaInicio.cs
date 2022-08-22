@@ -57,8 +57,6 @@ namespace UL.Pantallas
             }
             else
             {
-                ObjDAL.Observacion1 = "Test";
-
                 ObjBLL.InsertarRegistro(ref ObjDAL);
 
                 if (ObjDAL.sMsj_Error == string.Empty)

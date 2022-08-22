@@ -7,7 +7,7 @@ using System.Data;
 using DAL.Variables;
 using BLL.DB;
 using DAL.BD;
-
+using System.Text.RegularExpressions;
 
 namespace BLL.Logica
 {
@@ -67,25 +67,68 @@ namespace BLL.Logica
 
         public void Sumar(cls_Variables_Calculadora_DAL ObjDAL)
         {
-            double x, y;
+            if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+            {
+                double x, y;
 
-            x = Convert.ToInt32(ObjDAL.Valor1);
-            y = Convert.ToInt32(ObjDAL.Valor2);
+                x = Convert.ToInt32(ObjDAL.Valor1);
+                y = Convert.ToInt32(ObjDAL.Valor2);
 
-            ObjDAL.Resultado1 = Convert.ToString(x + y);
+                ObjDAL.Resultado1 = Convert.ToString(x + y);
+                ObjDAL.Observacion1 = "Transacción correcta";
+            }
+            else
+            {
+                if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Valor1;
+                    ObjDAL.Observacion1 = "B es una letra";
+                }
+                if (Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Valor2;
+                    ObjDAL.Observacion1 = "A es una letra";
+                }
+                if (!Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = string.Empty;
+                    ObjDAL.Observacion1 = "A & B son letras";
+                }
+            }
 
         }
 
         public void Restar(cls_Variables_Calculadora_DAL ObjDAL)
         {
-            double x, y;
+            if(Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+            {
+                double x, y;
 
-            x = Convert.ToInt32(ObjDAL.Valor1);
-            y = Convert.ToInt32(ObjDAL.Valor2);
+                x = Convert.ToInt32(ObjDAL.Valor1);
+                y = Convert.ToInt32(ObjDAL.Valor2);
 
-            ObjDAL.Resultado1 = Convert.ToString(x - y);
-
-        }
+                ObjDAL.Resultado1 = Convert.ToString(x - y);
+                ObjDAL.Observacion1 = "Transacción correcta";
+            }
+            else
+            {
+                if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Valor1;
+                    ObjDAL.Observacion1 = "B es una letra";
+                }
+                if (Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Valor2;
+                    ObjDAL.Observacion1 = "A es una letra";
+                }
+                if (!Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = string.Empty;
+                    ObjDAL.Observacion1 = "A & B son letras";
+                }               
+            }
+     }
 
         public void Multiplicar(cls_Variables_Calculadora_DAL ObjDAL)
         {
