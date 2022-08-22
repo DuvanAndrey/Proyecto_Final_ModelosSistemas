@@ -15,3 +15,4 @@ C:\Users\SSequeira\source\repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_Mod
 C:\Users\SSequeira\source\repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\SSequeira\source\repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.dll
 C:\Users\SSequeira\source\repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.pdb
+C:\Users\SSequeira\source\repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache

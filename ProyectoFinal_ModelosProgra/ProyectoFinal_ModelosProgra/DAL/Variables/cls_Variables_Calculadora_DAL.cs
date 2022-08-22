@@ -9,7 +9,9 @@ namespace DAL.Variables
 {
     public class cls_Variables_Calculadora_DAL
     {
-        string valor1, valor2, Resultado;
+        string valor1, Operador, valor2, Resultado, Observacion;
+
+        int idRegistro;
 
         #region VARIABLES PRIVADAS
 
@@ -115,7 +117,9 @@ namespace DAL.Variables
         public string Valor1 { get => valor1; set => valor1 = value; }
         public string Valor2 { get => valor2; set => valor2 = value; }
         public string Resultado1 { get => Resultado; set => Resultado = value; }
-
+        public string Operador1 { get => Operador; set => Operador = value; }
+        public string Observacion1 { get => Observacion; set => Observacion = value; }
+        public int IdRegistro { get => idRegistro; set => idRegistro = value; }
     }
 
     #endregion

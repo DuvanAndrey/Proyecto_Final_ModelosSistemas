@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProyectoFinal_ModelosProgra",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\UL",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\UL\\Pantallas"
   ],
-  "SelectedNode": "\\ProyectoFinal_ModelosProgra.sln",
+  "SelectedNode": "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\UL\\Pantallas\\PantallaInicio.cs",
   "PreviewInSolutionExplorer": false
 }

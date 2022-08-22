@@ -37,6 +37,34 @@ namespace BLL.Logica
             }
         }
 
+        public void InsertarRegistro(ref cls_Variables_Calculadora_DAL ObjDAL)
+        {
+            Obj_BD_DAL = new Cls_BD_DAL();
+
+            Obj_BD_DAL.sSentencia = "dbo.SpInsertarRegistros";
+
+            Obj_BD_BLL.Crear_DT_Parametros(ref Obj_BD_DAL);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add(@"@Expresion1", "4", ObjDAL.Valor1);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add(@"@Operador", "4", ObjDAL.Operador1);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add(@"@Expresion2", "4", ObjDAL.Valor2);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add(@"@Resultado", "4", ObjDAL.Resultado1);
+            Obj_BD_DAL.Dt_Parametros.Rows.Add(@"@Observaciones", "4", ObjDAL.Observacion1);
+
+            Obj_BD_BLL.Exec_Scalar(ref Obj_BD_DAL);
+
+            if (Obj_BD_DAL.sMsjError == string.Empty)
+            {
+                ObjDAL.sMsj_Error = string.Empty;
+                ObjDAL.IdRegistro = Convert.ToInt32(Obj_BD_DAL.sValorScalar);
+                ObjDAL.sAX = "U";
+            }
+            else
+            {
+                ObjDAL.sMsj_Error = Obj_BD_DAL.sMsjError;
+                ObjDAL.sAX = "I";
+            }
+        }
+
         public void Sumar(cls_Variables_Calculadora_DAL ObjDAL)
         {
             double x, y;

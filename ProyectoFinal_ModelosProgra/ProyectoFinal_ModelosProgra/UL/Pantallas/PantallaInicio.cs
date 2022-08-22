@@ -44,7 +44,34 @@ namespace UL.Pantallas
 
         private void buttonResultado_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = "+";
+            ObjDAL.Observacion1 = "Test";
+
+
+            if ((string.IsNullOrEmpty(textValor1.Text)) || (string.IsNullOrEmpty(textValor2.Text)))
+            {
+                MessageBox.Show("No pueden quedar campos vacíos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                ObjBLL.InsertarRegistro(ref ObjDAL);
+
+                if (ObjDAL.sMsj_Error == string.Empty)
+                {
+                    MessageBox.Show("El registro fue creado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Se produjo un error a la hora de insertar o crear el Estado.\n\nERROR = [ " + ObjDAL.sMsj_Error + " ].",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
             textResultado.Text = ObjDAL.Resultado1;
+
+            CargarDatos();
+
             textValor1.Text = string.Empty;
             textValor2.Text = string.Empty;
         }
@@ -95,5 +122,6 @@ namespace UL.Pantallas
                     "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
