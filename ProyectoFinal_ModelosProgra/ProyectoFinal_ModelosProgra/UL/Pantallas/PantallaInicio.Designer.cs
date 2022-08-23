@@ -91,7 +91,7 @@
             this.tabPage1.Controls.Add(this.textValor1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -168,19 +168,22 @@
             // 
             // textResultado
             // 
-            this.textResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textResultado.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textResultado.Location = new System.Drawing.Point(611, 313);
+            this.textResultado.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textResultado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textResultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textResultado.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textResultado.Location = new System.Drawing.Point(415, 345);
             this.textResultado.Name = "textResultado";
             this.textResultado.ReadOnly = true;
-            this.textResultado.Size = new System.Drawing.Size(117, 27);
+            this.textResultado.Size = new System.Drawing.Size(169, 43);
             this.textResultado.TabIndex = 9;
+            this.textResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(498, 316);
+            this.label5.Location = new System.Drawing.Point(420, 302);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 8;
@@ -203,7 +206,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(457, 28);
+            this.label4.Location = new System.Drawing.Point(411, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 20);
             this.label4.TabIndex = 7;
@@ -214,9 +217,9 @@
             this.dgvRegistro.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistro.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgvRegistro.Location = new System.Drawing.Point(461, 69);
+            this.dgvRegistro.Location = new System.Drawing.Point(415, 57);
             this.dgvRegistro.Name = "dgvRegistro";
-            this.dgvRegistro.Size = new System.Drawing.Size(394, 197);
+            this.dgvRegistro.Size = new System.Drawing.Size(448, 214);
             this.dgvRegistro.TabIndex = 6;
             // 
             // buttonSuma
@@ -235,7 +238,7 @@
             this.textValor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textValor2.Location = new System.Drawing.Point(221, 87);
             this.textValor2.Name = "textValor2";
-            this.textValor2.Size = new System.Drawing.Size(117, 27);
+            this.textValor2.Size = new System.Drawing.Size(117, 31);
             this.textValor2.TabIndex = 4;
             // 
             // textValor1
@@ -244,7 +247,7 @@
             this.textValor1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textValor1.Location = new System.Drawing.Point(221, 45);
             this.textValor1.Name = "textValor1";
-            this.textValor1.Size = new System.Drawing.Size(117, 27);
+            this.textValor1.Size = new System.Drawing.Size(117, 31);
             this.textValor1.TabIndex = 3;
             // 
             // label2
@@ -326,6 +329,7 @@
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PantallaInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.PantallaInicio_Load);

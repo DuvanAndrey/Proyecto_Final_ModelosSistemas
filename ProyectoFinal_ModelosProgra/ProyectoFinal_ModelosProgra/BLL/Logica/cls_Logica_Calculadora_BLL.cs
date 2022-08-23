@@ -132,23 +132,87 @@ namespace BLL.Logica
 
         public void Multiplicar(cls_Variables_Calculadora_DAL ObjDAL)
         {
-            double x, y;
+           
 
-            x = Convert.ToInt32(ObjDAL.Valor1);
-            y = Convert.ToInt32(ObjDAL.Valor2);
+          Regex regex = new Regex(@"^[0-9]+$");
 
-            ObjDAL.Resultado1 = Convert.ToString(x * y);
+            if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+
+            {
+
+                double x, y;
+
+                x = Convert.ToInt32(ObjDAL.Valor1);
+                y = Convert.ToInt32(ObjDAL.Valor2);
+
+                ObjDAL.Resultado1 = Convert.ToString(x - y);
+                ObjDAL.Observacion1 = "Transacción correcta";
+
+            }
+            else 
+            {
+                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                {
+
+                    ObjDAL.Resultado1 = ObjDAL.Valor1;
+                    ObjDAL.Observacion1 = "B es una letra";
+                }
+                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor2)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor1)))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Valor2;
+                    ObjDAL.Observacion1 = "A es una letra";
+                }
+               
+                if (!regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                {
+                    ObjDAL.Resultado1 = string.Empty;
+                    ObjDAL.Observacion1 = "A & B son letras";
+                }
+
+            }
 
         }
 
         public void Division(cls_Variables_Calculadora_DAL ObjDAL)
         {
-            double x, y;
 
-            x = Convert.ToInt32(ObjDAL.Valor1);
-            y = Convert.ToInt32(ObjDAL.Valor2);
+            Regex regex = new Regex(@"^[0-9]+$");
 
-            ObjDAL.Resultado1 = Convert.ToString(x / y);
+            if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+
+            {
+
+                double x, y;
+
+                x = Convert.ToInt32(ObjDAL.Valor1);
+                y = Convert.ToInt32(ObjDAL.Valor2);
+
+                ObjDAL.Resultado1 = Convert.ToString(x / y);
+                ObjDAL.Observacion1 = "Transacción correcta";
+
+            }
+            else
+            {
+                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                {
+
+                    ObjDAL.Resultado1 = ObjDAL.Valor1;
+                    ObjDAL.Observacion1 = "B es una letra";
+                }
+                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor2)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor1)))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Valor2;
+                    ObjDAL.Observacion1 = "A es una letra";
+                }
+
+                if (!regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                {
+                    ObjDAL.Resultado1 = string.Empty;
+                    ObjDAL.Observacion1 = "A & B son letras";
+                }
+
+            }
+
 
         }
 
