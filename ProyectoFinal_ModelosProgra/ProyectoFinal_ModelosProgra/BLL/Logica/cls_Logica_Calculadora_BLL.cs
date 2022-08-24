@@ -213,8 +213,6 @@ namespace BLL.Logica
 
             }
 
-
         }
-
     }
 }

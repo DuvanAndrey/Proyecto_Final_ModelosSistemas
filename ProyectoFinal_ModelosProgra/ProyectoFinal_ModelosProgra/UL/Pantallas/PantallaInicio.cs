@@ -55,6 +55,11 @@ namespace UL.Pantallas
                 MessageBox.Show("No pueden quedar campos vacíos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if ((string.IsNullOrEmpty(ObjDAL.Operador1)))
+            {
+                MessageBox.Show("Debe seleccionar una operación", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             else
             {
                 ObjBLL.InsertarRegistro(ref ObjDAL);
@@ -147,6 +152,12 @@ namespace UL.Pantallas
 
         private void buttonBorrarOperacion_Click(object sender, EventArgs e)
         {
+            ObjDAL.Operador1 = string.Empty;
+            ObjDAL.Valor1 = textValor1.Text;
+            ObjDAL.Valor2 = textValor2.Text;
+            ObjDAL.Resultado1 = string.Empty;
+            ObjDAL.Observacion1 = string.Empty;
+
             buttonResta.Enabled = true;
             buttonSuma.Enabled = true;
             buttonMultiplicar.Enabled = true;

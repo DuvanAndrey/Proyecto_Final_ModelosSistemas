@@ -3,9 +3,11 @@
     "",
     "\\ProyectoFinal_ModelosProgra",
     "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\BLL",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\BLL\\Logica",
     "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\UL",
     "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\UL\\Pantallas"
   ],
-  "SelectedNode": "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\UL\\Pantallas\\PantallaInicio.cs",
+  "SelectedNode": "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\BLL\\Logica\\cls_Logica_Calculadora_BLL.cs",
   "PreviewInSolutionExplorer": false
 }
