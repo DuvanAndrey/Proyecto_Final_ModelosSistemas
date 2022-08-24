@@ -163,5 +163,7 @@ namespace UL.Pantallas
             buttonMultiplicar.Enabled = true;
             buttonDivision.Enabled = true;
         }
+
+       
     }
 }
