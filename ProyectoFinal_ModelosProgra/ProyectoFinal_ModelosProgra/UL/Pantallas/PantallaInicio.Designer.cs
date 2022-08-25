@@ -56,7 +56,7 @@
             this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDato = new System.Windows.Forms.TextBox();
             this.btn_Inicio = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
@@ -299,7 +299,7 @@
             this.groupBox1.Controls.Add(this.materialRadioButton2);
             this.groupBox1.Controls.Add(this.materialRadioButton1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtDato);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(-4, 0);
@@ -402,16 +402,16 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Dato Ingresado";
             // 
-            // textBox3
+            // txtDato
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(214, 219);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(441, 39);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDato.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtDato.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDato.Location = new System.Drawing.Point(214, 219);
+            this.txtDato.Name = "txtDato";
+            this.txtDato.Size = new System.Drawing.Size(441, 39);
+            this.txtDato.TabIndex = 5;
+            this.txtDato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Inicio
             // 
@@ -469,7 +469,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox textValor2;
         private System.Windows.Forms.TextBox textValor1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDato;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonSuma;
         private System.Windows.Forms.Button btn_Inicio;

@@ -169,21 +169,56 @@ namespace UL.Pantallas
 
         private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            ObjDAL2.sFrase = txtDato.Text;
+
+
             ObjBLL2.Correo(ObjDAL2);
+
         }
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            ObjDAL2.sFrase = txtDato.Text;
+
+
             ObjBLL2.Fecha(ObjDAL2);
+
         }
 
         private void materialRadioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            ObjDAL2.sFrase = txtDato.Text;
+
+
             ObjBLL2.ID(ObjDAL2);
+
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtDato.Text))
+            {
+                MessageBox.Show("No puede quedar el campo vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                if (ObjDAL.sMsj_Error == string.Empty)
+                {
+                    MessageBox.Show("Ingreso los datos correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Ingreso los datos incorrectamente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+            }
+
+            txtDato.Text = string.Empty;
+
 
         }
     }
