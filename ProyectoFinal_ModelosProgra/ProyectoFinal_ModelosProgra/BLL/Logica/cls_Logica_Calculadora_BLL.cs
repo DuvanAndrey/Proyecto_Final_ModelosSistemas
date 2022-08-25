@@ -151,97 +151,107 @@ namespace BLL.Logica
 
         public void Multiplicar(cls_Variables_Calculadora_DAL ObjDAL)
         {
-
-
-            Regex regex = new Regex(@"^[0-9]+$");
-
-            if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
-
+            if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
             {
+                double x = 0;
+                double y = 0;
 
-                double x, y;
-
-                x = Convert.ToInt32(ObjDAL.Valor1);
-                y = Convert.ToInt32(ObjDAL.Valor2);
-
-                ObjDAL.Resultado1 = Convert.ToString(x - y);
-                ObjDAL.Observacion1 = "Transacción correcta";
-
-            }
-            else
-            {
-                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                if (ObjDAL.Resultado1 == string.Empty)
                 {
-
-                    ObjDAL.Resultado1 = ObjDAL.Valor1;
-                    ObjDAL.Observacion1 = "B es una letra";
+                    x = Convert.ToInt32(ObjDAL.Valor1);
+                    y = Convert.ToInt32(ObjDAL.Valor2);
+                    ObjDAL.Resultado1 = Convert.ToString(x * y);
+                    ObjDAL.Observacion1 = "Transacción correcta";
                 }
-                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor2)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor1)))
+                else
                 {
-                    ObjDAL.Resultado1 = ObjDAL.Valor2;
-                    ObjDAL.Observacion1 = "A es una letra";
-                }
-
-                if (!regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
-                {
-                    ObjDAL.Resultado1 = string.Empty;
-                    ObjDAL.Observacion1 = "A & B son letras";
-                }
-
-            }
-
-        }
-
-        public void Division(cls_Variables_Calculadora_DAL ObjDAL)
-        {
-
-            Regex regex = new Regex(@"^[0-9]+$");
-
-            if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
-
-            {
-                double x, y;
-
-                x = Convert.ToInt32(ObjDAL.Valor1);
-                y = Convert.ToInt32(ObjDAL.Valor2);
-
-                ObjDAL.Resultado1 = Convert.ToString(x / y);
-
-                if (Convert.ToInt32(ObjDAL.Valor2) == 0)
-                {
-                    ObjDAL.Observacion1 = "Division entre 0  no valida";
-                    ObjDAL.Resultado1 = "Division no valida ";
-                }
-                else 
-                {
+                    x = Convert.ToInt32(ObjDAL.Valor1);
+                    y = Convert.ToInt32(ObjDAL.Valor2);
+                    ObjDAL.Resultado1 = Convert.ToString((x * y) + Convert.ToInt32(ObjDAL.Resultado1));
                     ObjDAL.Observacion1 = "Transacción correcta";
                 }
             }
             else
             {
-
-                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
                 {
-
-                    ObjDAL.Resultado1 = ObjDAL.Valor1;
+                    ObjDAL.Resultado1 = Convert.ToString(Convert.ToInt32(ObjDAL.Valor1) + Convert.ToInt32(ObjDAL.Resultado1));
                     ObjDAL.Observacion1 = "B es una letra";
                 }
-                if (regex.IsMatch(Convert.ToString(ObjDAL.Valor2)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor1)))
+                if (Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$"))
                 {
-                    ObjDAL.Resultado1 = ObjDAL.Valor2;
+                    ObjDAL.Resultado1 = Convert.ToString(Convert.ToInt32(ObjDAL.Valor2) + Convert.ToInt32(ObjDAL.Resultado1));
                     ObjDAL.Observacion1 = "A es una letra";
                 }
-
-                if (!regex.IsMatch(Convert.ToString(ObjDAL.Valor1)) && !regex.IsMatch(Convert.ToString(ObjDAL.Valor2)))
+                if (!Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
                 {
-                    ObjDAL.Resultado1 = string.Empty;
+                    ObjDAL.Resultado1 = ObjDAL.Resultado1;
                     ObjDAL.Observacion1 = "A & B son letras";
                 }
-
             }
+        }
+
+        public void Division(cls_Variables_Calculadora_DAL ObjDAL)
+        {
+
+            if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+            {
+                double x = 0;
+                double y = 0;
+
+                if (ObjDAL.Resultado1 == string.Empty)
+                {
+                    if (Convert.ToInt32(ObjDAL.Valor2) == 0)
+                    {
+                        ObjDAL.Observacion1 = "División entre 0.";
+                        ObjDAL.Resultado1 = string.Empty;
+                    }
+                    else
+                    {
+                        x = Convert.ToInt32(ObjDAL.Valor1);
+                        y = Convert.ToInt32(ObjDAL.Valor2);
+                        ObjDAL.Resultado1 = Convert.ToString(x / y);
+                        ObjDAL.Observacion1 = "Transacción correcta";
+                    }
+                }
+                else
+                {
+                    if (Convert.ToInt32(ObjDAL.Valor2) == 0)
+                    {
+                        ObjDAL.Observacion1 = "División entre 0.";
+                        ObjDAL.Resultado1 = ObjDAL.Resultado1;
+                    }
+                    else
+                    {
+                        x = Convert.ToInt32(ObjDAL.Valor1);
+                        y = Convert.ToInt32(ObjDAL.Valor2);
+                        ObjDAL.Resultado1 = Convert.ToString((x / y) + Convert.ToInt32(ObjDAL.Resultado1));
+                        ObjDAL.Observacion1 = "Transacción correcta";
+                    }
+                }
+            }
+            else
+            {
+                if (Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = Convert.ToString(Convert.ToInt32(ObjDAL.Valor1) + Convert.ToInt32(ObjDAL.Resultado1));
+                    ObjDAL.Observacion1 = "B es una letra";
+                }
+                if (Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = Convert.ToString(Convert.ToInt32(ObjDAL.Valor2) + Convert.ToInt32(ObjDAL.Resultado1));
+                    ObjDAL.Observacion1 = "A es una letra";
+                }
+                if (!Regex.IsMatch(ObjDAL.Valor1, @"^[0-9]+$") && !Regex.IsMatch(ObjDAL.Valor2, @"^[0-9]+$"))
+                {
+                    ObjDAL.Resultado1 = ObjDAL.Resultado1;
+                    ObjDAL.Observacion1 = "A & B son letras";
+                }
+            }
+        } 
 
         }
     }
-}
+
     
 
