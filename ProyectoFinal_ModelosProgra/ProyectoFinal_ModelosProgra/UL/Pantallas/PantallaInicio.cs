@@ -212,19 +212,19 @@ namespace UL.Pantallas
             if(RadioButtonCorreo.Checked == true)
             {
                     ObjBLL2.Correo(ObjDAL2);
-                    MessageBox.Show(ObjDAL2.sMsj, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(ObjDAL2.sMsj, "Detalles", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
             }
             if (RadioButtonFecha.Checked == true)
             {
                 ObjBLL2.Fecha(ObjDAL2);
-                MessageBox.Show(ObjDAL2.sMsj, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ObjDAL2.sMsj, "Detalles", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (RadioButtonId.Checked == true)
             {
                 ObjBLL2.ID(ObjDAL2);
-                MessageBox.Show(ObjDAL2.sMsj, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ObjDAL2.sMsj, "Detalles", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
         }
