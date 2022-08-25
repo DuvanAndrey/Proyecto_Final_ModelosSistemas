@@ -100,10 +100,10 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Location = new System.Drawing.Point(4, 45);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(880, 437);
+            this.tabPage1.Size = new System.Drawing.Size(880, 431);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Calculadora";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -183,10 +183,9 @@
             this.textResultado.Location = new System.Drawing.Point(415, 345);
             this.textResultado.Name = "textResultado";
             this.textResultado.ReadOnly = true;
-            this.textResultado.Size = new System.Drawing.Size(169, 43);
+            this.textResultado.Size = new System.Drawing.Size(169, 54);
             this.textResultado.TabIndex = 9;
             this.textResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-           
             // 
             // label5
             // 
@@ -194,7 +193,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(420, 302);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.Size = new System.Drawing.Size(105, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "Resultado:";
             // 
@@ -217,7 +216,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(411, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 20);
+            this.label4.Size = new System.Drawing.Size(210, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Historial de Resultados";
             // 
@@ -228,6 +227,7 @@
             this.dgvRegistro.GridColor = System.Drawing.Color.Gainsboro;
             this.dgvRegistro.Location = new System.Drawing.Point(415, 57);
             this.dgvRegistro.Name = "dgvRegistro";
+            this.dgvRegistro.RowHeadersWidth = 51;
             this.dgvRegistro.Size = new System.Drawing.Size(448, 214);
             this.dgvRegistro.TabIndex = 6;
             // 
@@ -247,7 +247,7 @@
             this.textValor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textValor2.Location = new System.Drawing.Point(221, 87);
             this.textValor2.Name = "textValor2";
-            this.textValor2.Size = new System.Drawing.Size(117, 31);
+            this.textValor2.Size = new System.Drawing.Size(117, 37);
             this.textValor2.TabIndex = 4;
             // 
             // textValor1
@@ -256,7 +256,7 @@
             this.textValor1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textValor1.Location = new System.Drawing.Point(221, 45);
             this.textValor1.Name = "textValor1";
-            this.textValor1.Size = new System.Drawing.Size(117, 31);
+            this.textValor1.Size = new System.Drawing.Size(117, 37);
             this.textValor1.TabIndex = 3;
             // 
             // label2
@@ -265,7 +265,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 20);
+            this.label2.Size = new System.Drawing.Size(211, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "B) Ingrese otro numero";
             // 
@@ -275,7 +275,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 20);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "A) Ingrese un numero";
             // 
@@ -284,10 +284,10 @@
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.Location = new System.Drawing.Point(4, 45);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(880, 437);
+            this.tabPage2.Size = new System.Drawing.Size(880, 431);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Validador ";
             // 
@@ -347,7 +347,7 @@
             this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton3.Name = "materialRadioButton3";
             this.materialRadioButton3.Ripple = true;
-            this.materialRadioButton3.Size = new System.Drawing.Size(170, 30);
+            this.materialRadioButton3.Size = new System.Drawing.Size(207, 30);
             this.materialRadioButton3.TabIndex = 8;
             this.materialRadioButton3.TabStop = true;
             this.materialRadioButton3.Text = "Identificacion Nacional";
@@ -364,7 +364,7 @@
             this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton2.Name = "materialRadioButton2";
             this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(156, 30);
+            this.materialRadioButton2.Size = new System.Drawing.Size(189, 30);
             this.materialRadioButton2.TabIndex = 7;
             this.materialRadioButton2.TabStop = true;
             this.materialRadioButton2.Text = "Fecha (dd/MM/yyyy)";
@@ -382,11 +382,12 @@
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton1.Name = "materialRadioButton1";
             this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(143, 30);
+            this.materialRadioButton1.Size = new System.Drawing.Size(173, 30);
             this.materialRadioButton1.TabIndex = 6;
             this.materialRadioButton1.TabStop = true;
             this.materialRadioButton1.Text = "Correo Electrónico";
             this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
             // 
             // label3
             // 
@@ -394,7 +395,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(75, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.Size = new System.Drawing.Size(145, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Dato Ingresado";
             // 
@@ -405,7 +406,7 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(214, 219);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(441, 31);
+            this.textBox3.Size = new System.Drawing.Size(441, 39);
             this.textBox3.TabIndex = 5;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -432,7 +433,7 @@
             // 
             // PantallaInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 542);
             this.Controls.Add(this.btn_Inicio);

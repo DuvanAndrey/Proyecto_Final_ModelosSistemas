@@ -164,6 +164,9 @@ namespace UL.Pantallas
             buttonDivision.Enabled = true;
         }
 
-       
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
