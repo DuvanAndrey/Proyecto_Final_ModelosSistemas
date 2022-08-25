@@ -17,6 +17,9 @@ namespace UL.Pantallas
         cls_Variables_Calculadora_DAL ObjDAL = new cls_Variables_Calculadora_DAL();
         cls_Logica_Calculadora_BLL ObjBLL = new cls_Logica_Calculadora_BLL();
 
+        cls_Variables_Validador_DAL ObjDAL2 = new cls_Variables_Validador_DAL();
+        cls_Logica_Validador_BLL ObjBLL2 = new cls_Logica_Validador_BLL();
+
         public PantallaInicio()
         {
             InitializeComponent();
@@ -166,17 +169,17 @@ namespace UL.Pantallas
 
         private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            ObjBLL2.Correo(ObjDAL2);
         }
 
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            ObjBLL2.Fecha(ObjDAL2);
         }
 
         private void materialRadioButton3_CheckedChanged(object sender, EventArgs e)
         {
-
+            ObjBLL2.ID(ObjDAL2);
         }
 
         private void btnValidar_Click(object sender, EventArgs e)

@@ -22,11 +22,39 @@ namespace BLL.Logica
             if (Regex.IsMatch(ObjDAL2.sFrase, @"^[a-zA-Z0-9_]+([a-zA-Z0-9_.]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*.[a-zA-Z]{2,5}+$"))
             {
                
-                ObjDAL2.sMsj = "Transacción correcta";
+                ObjDAL2.sMsj = "Datos correcta";
             }
             else
             {
                 
+            }
+
+        }
+
+        public void Fecha(cls_Variables_Validador_DAL ObjDAL2)
+        {
+            if (Regex.IsMatch(ObjDAL2.sFrase, @"^[a-zA-Z0-9_]+([a-zA-Z0-9_.]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*.[a-zA-Z]{2,5}+$"))
+            {
+
+                ObjDAL2.sMsj = "Datos correcta";
+            }
+            else
+            {
+
+            }
+
+        }
+
+        public void ID(cls_Variables_Validador_DAL ObjDAL2)
+        {
+            if (Regex.IsMatch(ObjDAL2.sFrase, @"^(\d{1}[-]\d{4}[-]\d{4})+$"))
+            {
+
+                ObjDAL2.sMsj = "Datos correcta";
+            }
+            else
+            {
+
             }
 
         }
