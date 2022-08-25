@@ -203,16 +203,17 @@ namespace UL.Pantallas
             }
             else
             {
-                if (ObjDAL.sMsj_Error == string.Empty)
+                if (ObjDAL2.sMsj == "Datos Correctos")
                 {
                     MessageBox.Show("Ingreso los datos correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else
                 {
-                    MessageBox.Show("Ingreso los datos incorrectamente.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ingreso los datos incorrectamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
 
 
             }
