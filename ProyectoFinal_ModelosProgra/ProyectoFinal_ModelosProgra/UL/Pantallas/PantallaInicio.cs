@@ -168,5 +168,20 @@ namespace UL.Pantallas
         {
 
         }
+
+        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialRadioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnValidar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -334,6 +334,7 @@
             this.btnValidar.TabIndex = 9;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // materialRadioButton3
             // 
@@ -352,6 +353,7 @@
             this.materialRadioButton3.TabStop = true;
             this.materialRadioButton3.Text = "Identificacion Nacional";
             this.materialRadioButton3.UseVisualStyleBackColor = false;
+            this.materialRadioButton3.CheckedChanged += new System.EventHandler(this.materialRadioButton3_CheckedChanged);
             // 
             // materialRadioButton2
             // 
@@ -369,6 +371,7 @@
             this.materialRadioButton2.TabStop = true;
             this.materialRadioButton2.Text = "Fecha (dd/MM/yyyy)";
             this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
             // 
             // materialRadioButton1
             // 
