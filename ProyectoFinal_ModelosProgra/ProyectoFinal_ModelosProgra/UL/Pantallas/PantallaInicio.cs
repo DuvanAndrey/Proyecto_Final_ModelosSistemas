@@ -84,6 +84,7 @@ namespace UL.Pantallas
 
             textValor1.Text = string.Empty;
             textValor2.Text = string.Empty;
+            ObjDAL.Operador1 = string.Empty;
 
             buttonResta.Enabled = true;
             buttonSuma.Enabled = true;
