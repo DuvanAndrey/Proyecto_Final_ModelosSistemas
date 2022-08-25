@@ -22,3 +22,9 @@ C:\Users\Gcca1\OneDrive\Escritorio\proyecto\ProyectoFinal_ModelosProgra\Proyecto
 C:\Users\Gcca1\OneDrive\Escritorio\proyecto\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Gcca1\OneDrive\Escritorio\proyecto\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.dll
 C:\Users\Gcca1\OneDrive\Escritorio\proyecto\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.pdb
+C:\Users\Gcca1\OneDrive\Escritorio\proyectos\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\bin\Debug\DAL.dll
+C:\Users\Gcca1\OneDrive\Escritorio\proyectos\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\bin\Debug\DAL.pdb
+C:\Users\Gcca1\OneDrive\Escritorio\proyectos\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Gcca1\OneDrive\Escritorio\proyectos\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Gcca1\OneDrive\Escritorio\proyectos\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.dll
+C:\Users\Gcca1\OneDrive\Escritorio\proyectos\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\DAL\obj\Debug\DAL.pdb

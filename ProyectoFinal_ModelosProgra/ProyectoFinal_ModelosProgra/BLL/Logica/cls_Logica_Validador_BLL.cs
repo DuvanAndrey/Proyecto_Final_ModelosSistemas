@@ -28,7 +28,6 @@ namespace BLL.Logica
             {
                 ObjDAL2.sMsj = "Datos Incorrectos";
             }
-
         }
 
         public void Fecha(cls_Variables_Validador_DAL ObjDAL2)

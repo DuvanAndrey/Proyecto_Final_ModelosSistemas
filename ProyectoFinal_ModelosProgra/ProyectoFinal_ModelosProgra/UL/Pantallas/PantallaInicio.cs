@@ -196,31 +196,24 @@ namespace UL.Pantallas
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
+            ObjDAL2.sFrase = txtDato.Text;
+
             if (string.IsNullOrEmpty(txtDato.Text))
             {
                 MessageBox.Show("No puede quedar el campo vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else
+            if (RadioButtonCorreo.Checked == false && RadioButtonFecha.Checked == false && RadioButtonId.Checked == false)
             {
-                if (ObjDAL2.sMsj == "Datos Correctos")
-                {
-                    MessageBox.Show("Ingreso los datos correctamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                else
-                {
-                    MessageBox.Show("Ingreso los datos incorrectamente.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-
-
-
+                MessageBox.Show("Por favor seleccione un validador", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-
-            txtDato.Text = string.Empty;
-
-
+           if(RadioButtonCorreo.Checked == true)
+           {
+                    ObjBLL2.Correo(ObjDAL2);
+                    MessageBox.Show(ObjDAL2.sMsj, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+           }
         }
     }
 }

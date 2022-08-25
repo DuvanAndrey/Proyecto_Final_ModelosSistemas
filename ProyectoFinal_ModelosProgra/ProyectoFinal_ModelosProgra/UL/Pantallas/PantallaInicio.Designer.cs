@@ -52,9 +52,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnValidar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRadioButton3 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RadioButtonId = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RadioButtonFecha = new MaterialSkin.Controls.MaterialRadioButton();
+            this.RadioButtonCorreo = new MaterialSkin.Controls.MaterialRadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDato = new System.Windows.Forms.TextBox();
             this.btn_Inicio = new System.Windows.Forms.Button();
@@ -295,9 +295,9 @@
             // 
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.btnValidar);
-            this.groupBox1.Controls.Add(this.materialRadioButton3);
-            this.groupBox1.Controls.Add(this.materialRadioButton2);
-            this.groupBox1.Controls.Add(this.materialRadioButton1);
+            this.groupBox1.Controls.Add(this.RadioButtonId);
+            this.groupBox1.Controls.Add(this.RadioButtonFecha);
+            this.groupBox1.Controls.Add(this.RadioButtonCorreo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDato);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -336,61 +336,61 @@
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
-            // materialRadioButton3
+            // RadioButtonId
             // 
-            this.materialRadioButton3.AutoSize = true;
-            this.materialRadioButton3.BackColor = System.Drawing.Color.Gainsboro;
-            this.materialRadioButton3.Depth = 0;
-            this.materialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton3.Location = new System.Drawing.Point(610, 77);
-            this.materialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton3.Name = "materialRadioButton3";
-            this.materialRadioButton3.Ripple = true;
-            this.materialRadioButton3.Size = new System.Drawing.Size(207, 30);
-            this.materialRadioButton3.TabIndex = 8;
-            this.materialRadioButton3.TabStop = true;
-            this.materialRadioButton3.Text = "Identificacion Nacional";
-            this.materialRadioButton3.UseVisualStyleBackColor = false;
-            this.materialRadioButton3.CheckedChanged += new System.EventHandler(this.materialRadioButton3_CheckedChanged);
+            this.RadioButtonId.AutoSize = true;
+            this.RadioButtonId.BackColor = System.Drawing.Color.Gainsboro;
+            this.RadioButtonId.Depth = 0;
+            this.RadioButtonId.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RadioButtonId.Location = new System.Drawing.Point(610, 77);
+            this.RadioButtonId.Margin = new System.Windows.Forms.Padding(0);
+            this.RadioButtonId.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RadioButtonId.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RadioButtonId.Name = "RadioButtonId";
+            this.RadioButtonId.Ripple = true;
+            this.RadioButtonId.Size = new System.Drawing.Size(207, 30);
+            this.RadioButtonId.TabIndex = 8;
+            this.RadioButtonId.TabStop = true;
+            this.RadioButtonId.Text = "Identificacion Nacional";
+            this.RadioButtonId.UseVisualStyleBackColor = false;
+            this.RadioButtonId.CheckedChanged += new System.EventHandler(this.materialRadioButton3_CheckedChanged);
             // 
-            // materialRadioButton2
+            // RadioButtonFecha
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton2.Location = new System.Drawing.Point(346, 77);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(189, 30);
-            this.materialRadioButton2.TabIndex = 7;
-            this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Fecha (dd/MM/yyyy)";
-            this.materialRadioButton2.UseVisualStyleBackColor = true;
-            this.materialRadioButton2.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
+            this.RadioButtonFecha.AutoSize = true;
+            this.RadioButtonFecha.Depth = 0;
+            this.RadioButtonFecha.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RadioButtonFecha.Location = new System.Drawing.Point(346, 77);
+            this.RadioButtonFecha.Margin = new System.Windows.Forms.Padding(0);
+            this.RadioButtonFecha.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RadioButtonFecha.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RadioButtonFecha.Name = "RadioButtonFecha";
+            this.RadioButtonFecha.Ripple = true;
+            this.RadioButtonFecha.Size = new System.Drawing.Size(189, 30);
+            this.RadioButtonFecha.TabIndex = 7;
+            this.RadioButtonFecha.TabStop = true;
+            this.RadioButtonFecha.Text = "Fecha (dd/MM/yyyy)";
+            this.RadioButtonFecha.UseVisualStyleBackColor = true;
+            this.RadioButtonFecha.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
             // 
-            // materialRadioButton1
+            // RadioButtonCorreo
             // 
-            this.materialRadioButton1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton1.Location = new System.Drawing.Point(96, 77);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(173, 30);
-            this.materialRadioButton1.TabIndex = 6;
-            this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Correo Electrónico";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
-            this.materialRadioButton1.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
+            this.RadioButtonCorreo.Appearance = System.Windows.Forms.Appearance.Button;
+            this.RadioButtonCorreo.AutoSize = true;
+            this.RadioButtonCorreo.Depth = 0;
+            this.RadioButtonCorreo.Font = new System.Drawing.Font("Roboto", 10F);
+            this.RadioButtonCorreo.Location = new System.Drawing.Point(96, 77);
+            this.RadioButtonCorreo.Margin = new System.Windows.Forms.Padding(0);
+            this.RadioButtonCorreo.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.RadioButtonCorreo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RadioButtonCorreo.Name = "RadioButtonCorreo";
+            this.RadioButtonCorreo.Ripple = true;
+            this.RadioButtonCorreo.Size = new System.Drawing.Size(173, 30);
+            this.RadioButtonCorreo.TabIndex = 6;
+            this.RadioButtonCorreo.TabStop = true;
+            this.RadioButtonCorreo.Text = "Correo Electrónico";
+            this.RadioButtonCorreo.UseVisualStyleBackColor = true;
+            this.RadioButtonCorreo.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
             // 
             // label3
             // 
@@ -487,9 +487,9 @@
         private System.Windows.Forms.Button buttonResta;
         private System.Windows.Forms.GroupBox groupBox1;
         private MaterialSkin.Controls.MaterialRaisedButton btnValidar;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton3;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
+        private MaterialSkin.Controls.MaterialRadioButton RadioButtonId;
+        private MaterialSkin.Controls.MaterialRadioButton RadioButtonFecha;
+        private MaterialSkin.Controls.MaterialRadioButton RadioButtonCorreo;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
