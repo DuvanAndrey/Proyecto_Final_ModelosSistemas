@@ -205,15 +205,27 @@ namespace UL.Pantallas
             }
             if (RadioButtonCorreo.Checked == false && RadioButtonFecha.Checked == false && RadioButtonId.Checked == false)
             {
-                MessageBox.Show("Por favor seleccione un validador", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor seleccione una opcion valida para poder realizar la validacion", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-           if(RadioButtonCorreo.Checked == true)
-           {
+            if(RadioButtonCorreo.Checked == true)
+            {
                     ObjBLL2.Correo(ObjDAL2);
-                    MessageBox.Show(ObjDAL2.sMsj, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(ObjDAL2.sMsj, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
-           }
+            }
+            if (RadioButtonFecha.Checked == true)
+            {
+                ObjBLL2.Fecha(ObjDAL2);
+                MessageBox.Show(ObjDAL2.sMsj, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (RadioButtonId.Checked == true)
+            {
+                ObjBLL2.ID(ObjDAL2);
+                MessageBox.Show(ObjDAL2.sMsj, "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
     }
 }
