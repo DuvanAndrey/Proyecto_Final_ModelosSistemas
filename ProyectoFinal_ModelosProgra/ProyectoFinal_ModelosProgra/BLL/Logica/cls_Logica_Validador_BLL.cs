@@ -19,7 +19,7 @@ namespace BLL.Logica
 
         public void Correo(cls_Variables_Validador_DAL ObjDAL2)
         {
-            if (Regex.IsMatch(ObjDAL2.sFrase, @"^[a-zA-Z0-9_]+([a-zA-Z0-9_.]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*.[a-zA-Z]{2,5}+$"))
+            if (Regex.IsMatch(ObjDAL2.sFrase, @"^[a-zA-Z0-9_]+([a-zA-Z0-9_.]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*.[a-zA-Z]{2,5}$"))
             {
                
                 ObjDAL2.sMsj = "Datos correcto";
@@ -33,7 +33,7 @@ namespace BLL.Logica
 
         public void Fecha(cls_Variables_Validador_DAL ObjDAL2)
         {
-            if (Regex.IsMatch(ObjDAL2.sFrase, @"^\\d{1,2}/\\d{1,2}/\\d{4}+$") && Regex.IsMatch(ObjDAL2.sFrase, @"^\\d{1,2}/(?1)(ene|febr|mar|abr|may|jun|jul|agos|sept|oct|nov|dic)/\\d{4}+$"))
+            if (Regex.IsMatch(ObjDAL2.sFrase, @"^\\d{1,2}/\\d{1,2}/\\d{4}$") && Regex.IsMatch(ObjDAL2.sFrase, @"^\\d{1,2}/(?1)(ene|febr|mar|abr|may|jun|jul|agos|sept|oct|nov|dic)/\\d{4}$"))
             {
 
                 ObjDAL2.sMsj = "Datos correcto";
