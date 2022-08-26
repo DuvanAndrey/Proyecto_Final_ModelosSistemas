@@ -14,6 +14,8 @@ namespace UL.Pantallas
 {
     public partial class PantallaInicio : MaterialSkin.Controls.MaterialForm
     {
+        string estado;
+
         cls_Variables_Calculadora_DAL ObjDAL = new cls_Variables_Calculadora_DAL();
         cls_Logica_Calculadora_BLL ObjBLL = new cls_Logica_Calculadora_BLL();
 
@@ -39,11 +41,11 @@ namespace UL.Pantallas
 
         private void buttonSuma_Click(object sender, EventArgs e)
         {
+            estado = "SUMA";
             ObjDAL.Operador1 = "+";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
-            ObjBLL.Sumar(ObjDAL);
             buttonResta.Enabled = false;
             buttonMultiplicar.Enabled = false;
             buttonDivision.Enabled = false;
@@ -65,6 +67,23 @@ namespace UL.Pantallas
             }
             else
             {
+                if (estado == "SUMA")
+                {
+                    ObjBLL.Sumar(ObjDAL);
+                }
+                if (estado == "RESTA")
+                {
+                    ObjBLL.Restar(ObjDAL);
+                }
+                if (estado == "MULTIPLICACION")
+                {
+                    ObjBLL.Multiplicar(ObjDAL);
+                }
+                if (estado == "DIVISION")
+                {
+                    ObjBLL.Division(ObjDAL);
+                }
+
                 ObjBLL.InsertarRegistro(ref ObjDAL);
 
                 if (ObjDAL.sMsj_Error == string.Empty)
@@ -94,11 +113,11 @@ namespace UL.Pantallas
 
         private void buttonResta_Click(object sender, EventArgs e)
         {
+            estado = "RESTA";
             ObjDAL.Operador1 = "-";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
-            ObjBLL.Restar(ObjDAL);
             buttonResta.Enabled = false;
             buttonMultiplicar.Enabled = false;
             buttonDivision.Enabled = false;
@@ -106,11 +125,11 @@ namespace UL.Pantallas
 
         private void buttonMultiplicar_Click(object sender, EventArgs e)
         {
+            estado = "MULTIPLICACION";
             ObjDAL.Operador1 = "*";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
 
-            ObjBLL.Multiplicar(ObjDAL);
             buttonResta.Enabled = false;
             buttonSuma.Enabled = false;
             buttonDivision.Enabled = false;
@@ -118,6 +137,8 @@ namespace UL.Pantallas
 
         private void buttonDivision_Click(object sender, EventArgs e)
         {
+            estado = "DIVISIÓN";
+
             ObjDAL.Operador1 = "/";
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
@@ -130,6 +151,7 @@ namespace UL.Pantallas
 
         private void buttonBorrarDatos_Click(object sender, EventArgs e)
         {
+            estado = string.Empty;
             ObjDAL.Operador1 = string.Empty;
             textValor1.Text = string.Empty;
             textValor2.Text = string.Empty;
@@ -159,40 +181,12 @@ namespace UL.Pantallas
             ObjDAL.Operador1 = string.Empty;
             ObjDAL.Valor1 = textValor1.Text;
             ObjDAL.Valor2 = textValor2.Text;
-            ObjDAL.Resultado1 = string.Empty;
             ObjDAL.Observacion1 = string.Empty;
 
             buttonResta.Enabled = true;
             buttonSuma.Enabled = true;
             buttonMultiplicar.Enabled = true;
             buttonDivision.Enabled = true;
-        }
-
-        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            ObjDAL2.sFrase = txtDato.Text;
-
-
-            ObjBLL2.Correo(ObjDAL2);
-
-        }
-
-        private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            ObjDAL2.sFrase = txtDato.Text;
-
-
-            ObjBLL2.Fecha(ObjDAL2);
-
-        }
-
-        private void materialRadioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            ObjDAL2.sFrase = txtDato.Text;
-
-
-            ObjBLL2.ID(ObjDAL2);
-
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
@@ -226,6 +220,43 @@ namespace UL.Pantallas
                 ObjBLL2.ID(ObjDAL2);
                 MessageBox.Show(ObjDAL2.sMsj, "Detalles", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
+            }
+        }
+
+        private void buttonExportacion_Click(object sender, EventArgs e)
+        {
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\SSequeira\Desktop\BitacoraGeneral.txt");
+            try
+            {
+                string sLine = "";
+                //This for loop loops through each row in the table
+                for (int r = 0; r <= dgvRegistro.Rows.Count - 1; r++)
+                {
+                    //This for loop loops through each column, and the row number
+                    //is passed from the for loop above.
+                    for (int c = 0; c <= dgvRegistro.Columns.Count - 1; c++)
+                    {
+                        sLine = sLine + dgvRegistro.Rows[r].Cells[c].Value;
+                        if (c != dgvRegistro.Columns.Count - 1)
+                        {
+                            //A comma is added as a text delimiter in order
+                            //to separate each field in the text file.
+                            //You can choose another character as a delimiter.
+                            sLine = sLine + ";";
+                        }
+                    }
+                    //The exported text is written to the text file, one line at a time.
+                    file.WriteLine(sLine);
+                    sLine = "";
+                }
+
+                file.Close();
+                System.Windows.Forms.MessageBox.Show("Exportación completa.", "Detalles", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (System.Exception err)
+            {
+                System.Windows.Forms.MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                file.Close();
             }
         }
     }

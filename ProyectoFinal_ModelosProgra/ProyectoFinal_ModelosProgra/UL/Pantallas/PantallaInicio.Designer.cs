@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaInicio));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonExportacion = new System.Windows.Forms.Button();
             this.buttonResultado = new System.Windows.Forms.Button();
             this.buttonBorrarDatos = new System.Windows.Forms.Button();
             this.buttonBorrarOperacion = new System.Windows.Forms.Button();
@@ -83,6 +84,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.buttonExportacion);
             this.tabPage1.Controls.Add(this.buttonResultado);
             this.tabPage1.Controls.Add(this.buttonBorrarDatos);
             this.tabPage1.Controls.Add(this.buttonBorrarOperacion);
@@ -100,13 +102,24 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 45);
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(880, 431);
+            this.tabPage1.Size = new System.Drawing.Size(880, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Calculadora";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonExportacion
+            // 
+            this.buttonExportacion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExportacion.Location = new System.Drawing.Point(603, 345);
+            this.buttonExportacion.Name = "buttonExportacion";
+            this.buttonExportacion.Size = new System.Drawing.Size(211, 43);
+            this.buttonExportacion.TabIndex = 16;
+            this.buttonExportacion.Text = "Exportación";
+            this.buttonExportacion.UseVisualStyleBackColor = true;
+            this.buttonExportacion.Click += new System.EventHandler(this.buttonExportacion_Click);
             // 
             // buttonResultado
             // 
@@ -183,7 +196,7 @@
             this.textResultado.Location = new System.Drawing.Point(415, 345);
             this.textResultado.Name = "textResultado";
             this.textResultado.ReadOnly = true;
-            this.textResultado.Size = new System.Drawing.Size(169, 54);
+            this.textResultado.Size = new System.Drawing.Size(169, 43);
             this.textResultado.TabIndex = 9;
             this.textResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -193,7 +206,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(420, 302);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 25);
+            this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Resultado:";
             // 
@@ -216,7 +229,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(411, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(210, 25);
+            this.label4.Size = new System.Drawing.Size(173, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Historial de Resultados";
             // 
@@ -247,7 +260,7 @@
             this.textValor2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textValor2.Location = new System.Drawing.Point(221, 87);
             this.textValor2.Name = "textValor2";
-            this.textValor2.Size = new System.Drawing.Size(117, 37);
+            this.textValor2.Size = new System.Drawing.Size(117, 31);
             this.textValor2.TabIndex = 4;
             // 
             // textValor1
@@ -256,7 +269,7 @@
             this.textValor1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textValor1.Location = new System.Drawing.Point(221, 45);
             this.textValor1.Name = "textValor1";
-            this.textValor1.Size = new System.Drawing.Size(117, 37);
+            this.textValor1.Size = new System.Drawing.Size(117, 31);
             this.textValor1.TabIndex = 3;
             // 
             // label2
@@ -265,9 +278,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(34, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 25);
+            this.label2.Size = new System.Drawing.Size(152, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "B) Ingrese otro numero";
+            this.label2.Text = "B) Ingrese otro valor";
             // 
             // label1
             // 
@@ -275,19 +288,19 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(34, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.Size = new System.Drawing.Size(142, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "A) Ingrese un numero";
+            this.label1.Text = "A) Ingrese un valor";
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage2.Location = new System.Drawing.Point(4, 45);
+            this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(880, 431);
+            this.tabPage2.Size = new System.Drawing.Size(880, 437);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Validador ";
             // 
@@ -325,12 +338,12 @@
             // btnValidar
             // 
             this.btnValidar.Depth = 0;
-            this.btnValidar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValidar.Location = new System.Drawing.Point(693, 206);
+            this.btnValidar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidar.Location = new System.Drawing.Point(687, 210);
             this.btnValidar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Primary = true;
-            this.btnValidar.Size = new System.Drawing.Size(87, 44);
+            this.btnValidar.Size = new System.Drawing.Size(104, 52);
             this.btnValidar.TabIndex = 9;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = true;
@@ -342,36 +355,34 @@
             this.RadioButtonId.BackColor = System.Drawing.Color.Gainsboro;
             this.RadioButtonId.Depth = 0;
             this.RadioButtonId.Font = new System.Drawing.Font("Roboto", 10F);
-            this.RadioButtonId.Location = new System.Drawing.Point(610, 77);
+            this.RadioButtonId.Location = new System.Drawing.Point(573, 77);
             this.RadioButtonId.Margin = new System.Windows.Forms.Padding(0);
             this.RadioButtonId.MouseLocation = new System.Drawing.Point(-1, -1);
             this.RadioButtonId.MouseState = MaterialSkin.MouseState.HOVER;
             this.RadioButtonId.Name = "RadioButtonId";
             this.RadioButtonId.Ripple = true;
-            this.RadioButtonId.Size = new System.Drawing.Size(207, 30);
+            this.RadioButtonId.Size = new System.Drawing.Size(255, 30);
             this.RadioButtonId.TabIndex = 8;
             this.RadioButtonId.TabStop = true;
-            this.RadioButtonId.Text = "Identificacion Nacional";
+            this.RadioButtonId.Text = "Identificación Nacional (x-xxxx-xxxx)";
             this.RadioButtonId.UseVisualStyleBackColor = false;
-            this.RadioButtonId.CheckedChanged += new System.EventHandler(this.materialRadioButton3_CheckedChanged);
             // 
             // RadioButtonFecha
             // 
             this.RadioButtonFecha.AutoSize = true;
             this.RadioButtonFecha.Depth = 0;
             this.RadioButtonFecha.Font = new System.Drawing.Font("Roboto", 10F);
-            this.RadioButtonFecha.Location = new System.Drawing.Point(346, 77);
+            this.RadioButtonFecha.Location = new System.Drawing.Point(330, 77);
             this.RadioButtonFecha.Margin = new System.Windows.Forms.Padding(0);
             this.RadioButtonFecha.MouseLocation = new System.Drawing.Point(-1, -1);
             this.RadioButtonFecha.MouseState = MaterialSkin.MouseState.HOVER;
             this.RadioButtonFecha.Name = "RadioButtonFecha";
             this.RadioButtonFecha.Ripple = true;
-            this.RadioButtonFecha.Size = new System.Drawing.Size(189, 30);
+            this.RadioButtonFecha.Size = new System.Drawing.Size(156, 30);
             this.RadioButtonFecha.TabIndex = 7;
             this.RadioButtonFecha.TabStop = true;
             this.RadioButtonFecha.Text = "Fecha (dd/MM/yyyy)";
             this.RadioButtonFecha.UseVisualStyleBackColor = true;
-            this.RadioButtonFecha.CheckedChanged += new System.EventHandler(this.materialRadioButton2_CheckedChanged);
             // 
             // RadioButtonCorreo
             // 
@@ -379,26 +390,25 @@
             this.RadioButtonCorreo.AutoSize = true;
             this.RadioButtonCorreo.Depth = 0;
             this.RadioButtonCorreo.Font = new System.Drawing.Font("Roboto", 10F);
-            this.RadioButtonCorreo.Location = new System.Drawing.Point(96, 77);
+            this.RadioButtonCorreo.Location = new System.Drawing.Point(52, 77);
             this.RadioButtonCorreo.Margin = new System.Windows.Forms.Padding(0);
             this.RadioButtonCorreo.MouseLocation = new System.Drawing.Point(-1, -1);
             this.RadioButtonCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             this.RadioButtonCorreo.Name = "RadioButtonCorreo";
             this.RadioButtonCorreo.Ripple = true;
-            this.RadioButtonCorreo.Size = new System.Drawing.Size(173, 30);
+            this.RadioButtonCorreo.Size = new System.Drawing.Size(143, 30);
             this.RadioButtonCorreo.TabIndex = 6;
             this.RadioButtonCorreo.TabStop = true;
             this.RadioButtonCorreo.Text = "Correo Electrónico";
             this.RadioButtonCorreo.UseVisualStyleBackColor = true;
-            this.RadioButtonCorreo.CheckedChanged += new System.EventHandler(this.materialRadioButton1_CheckedChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 229);
+            this.label3.Location = new System.Drawing.Point(75, 221);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 25);
+            this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Dato Ingresado";
             // 
@@ -409,7 +419,7 @@
             this.txtDato.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDato.Location = new System.Drawing.Point(214, 219);
             this.txtDato.Name = "txtDato";
-            this.txtDato.Size = new System.Drawing.Size(441, 39);
+            this.txtDato.Size = new System.Drawing.Size(441, 31);
             this.txtDato.TabIndex = 5;
             this.txtDato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -436,7 +446,7 @@
             // 
             // PantallaInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 542);
             this.Controls.Add(this.btn_Inicio);
@@ -491,5 +501,6 @@
         private MaterialSkin.Controls.MaterialRadioButton RadioButtonFecha;
         private MaterialSkin.Controls.MaterialRadioButton RadioButtonCorreo;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonExportacion;
     }
 }

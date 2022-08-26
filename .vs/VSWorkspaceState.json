@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ProyectoFinal_ModelosProgra",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\BLL",
+    "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\BLL\\Logica"
   ],
-  "SelectedNode": "\\ProyectoFinal_ModelosProgra.sln",
+  "SelectedNode": "\\ProyectoFinal_ModelosProgra\\ProyectoFinal_ModelosProgra\\BLL\\Logica\\cls_Logica_Validador_BLL.cs",
   "PreviewInSolutionExplorer": false
 }
