@@ -32,7 +32,7 @@ namespace BLL.Logica
 
         public void Fecha(cls_Variables_Validador_DAL ObjDAL2)
         {
-            if (Regex.IsMatch(ObjDAL2.sFrase, @"^[0-9]{2,2}\\ / [0-9]{2,2}\\ / [0-9]{4,4}$"))
+            if (Regex.IsMatch(ObjDAL2.sFrase, @"^(\d{1,2}[/]\d{1,2}[/]\d{2,4})+$"))
             {
 
                 ObjDAL2.sMsj = "Datos Correctos";

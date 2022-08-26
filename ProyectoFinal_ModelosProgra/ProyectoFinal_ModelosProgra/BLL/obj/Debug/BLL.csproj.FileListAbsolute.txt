@@ -43,3 +43,12 @@ C:\Users\SSequeira\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_Mod
 C:\Users\SSequeira\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\SSequeira\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.dll
 C:\Users\SSequeira\Source\Repos\Proyecto_Final_ModelosSistemas\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.pdb
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\BLL.dll
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\BLL.pdb
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\DAL.dll
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\bin\Debug\DAL.pdb
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.dll
+C:\Users\Gcca1\OneDrive\Escritorio\Proyect\ProyectoFinal_ModelosProgra\ProyectoFinal_ModelosProgra\BLL\obj\Debug\BLL.pdb
